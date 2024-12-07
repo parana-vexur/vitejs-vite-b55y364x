@@ -1,0 +1,57 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --discord-bg: #36393f;
+  --discord-primary: #5865F2;
+  --discord-secondary: #2f3136;
+  --discord-text: #dcddde;
+  --discord-muted: #72767d;
+  --discord-hover: #32353b;
+  --discord-input: #202225;
+  --discord-error: #ed4245;
+  --discord-success: #3ba55c;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--discord-bg);
+  color: var(--discord-text);
+  font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.discord-input {
+  @apply w-full px-3 py-2 rounded bg-[#202225] border border-[#1e1f22] text-[#dcddde] text-sm;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.discord-input:focus {
+  @apply outline-none border-[#5865F2];
+}
+
+.discord-button {
+  @apply w-full py-2.5 px-4 rounded bg-[#5865F2] text-white font-medium text-sm transition-all duration-200;
+}
+
+.discord-button:hover {
+  @apply bg-[#4752c4];
+}
+
+.discord-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.discord-card {
+  @apply bg-[#2f3136] rounded-md shadow-lg;
+}
+
+.discord-sidebar {
+  @apply bg-[#2f3136] border-l border-[#202225];
+}
+
+.discord-link {
+  @apply text-[#00aff4] hover:underline;
+}
